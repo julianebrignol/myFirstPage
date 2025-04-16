@@ -1,5 +1,4 @@
 * {
-<<<<<<< HEAD
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -34,11 +33,6 @@ body {
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-=======
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Outfit", sans-serif; /* define fonte padrão do site */
 }
 
 body {
@@ -60,24 +54,17 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
->>>>>>> 7b8587a8f9d1be2769569e60db38ddde7060f648
 }
 
 .nav-left,
 .nav-right {
-<<<<<<< HEAD
 	display: flex;
 	gap: 24px;
 	/* espaço entre os links */
-=======
-  display: flex;
-  gap: 24px; /* espaço entre os links */
->>>>>>> 7b8587a8f9d1be2769569e60db38ddde7060f648
 }
 
 .nav-left a,
 .nav-right a {
-<<<<<<< HEAD
 	text-decoration: none;
 	/* remove o sublinhado dos links */
 	color: #5c5955;
@@ -124,56 +111,13 @@ section {
 	padding: 30px 40px;
 	margin-top: 20px;
 	text-transform: lowercase;
-=======
-  text-decoration: none; /* remove o sublinhado dos links */
-  color: #5c5955; /* cor de texto escura e elegante */
-  font-weight: 600; /* peso da fonte (meio negrito) */
-  font-size: 14px; /* tamanho da fonte nos menus */
-}
-
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Sora", sans-serif;
-  font-size: clamp(20px, 4vw, 32px);
-  font-weight: 700;
-  color: #5c5955;
-  text-transform: lowercase;
-  white-space: nowrap;
-}
-
-html {
-  scroll-behavior: smooth; /* rolagem suave ao clicar nos links de navegação */
-}
-
-section#about {
-  scroll-margin-top: 100px;
-}
-
-section {
-  scroll-margin-top: 120px;
-}
-
-.about-section h2 {
-  color: rgb(243, 152, 211);
-}
-
-.about-section {
-  max-width: 1000px;
-  margin: 60px auto;
-  text-align: center;
-  padding: 30px 40px;
-  margin-top: 20px;
-  text-transform: lowercase;
->>>>>>> 7b8587a8f9d1be2769569e60db38ddde7060f648
 }
 
 #contact h2,
 .about-section h2,
 .side-card h2,
 .card h2 {
-<<<<<<< HEAD
+
 	font-family: "Sora", sans-serif;
 	font-size: 30px;
 	font-weight: 700;
@@ -224,58 +168,7 @@ section {
 	font-size: 28px;
 	font-weight: 700;
 	color: rgb(243, 152, 211);
-	text-transform: lowercase;
-=======
-  font-family: "Sora", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  color: rgb(243, 152, 211);
-  margin-bottom: 20px;
-  margin-top: 0;
-  text-transform: lowercase;
-}
-
-.about-section img {
-  margin-top: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* sombra suave na foto */
-}
-
-.photo-group {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 40px auto;
-  max-width: 1000px;
-  flex-wrap: nowrap;
-}
-
-.photo-group img {
-  width: 240px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.side-card {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px 30px;
-  background-color: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  font-size: 18px;
-}
-.side-card h2 {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 700;
-  color: rgb(243, 152, 211);
-  text-transform: lowercase;
->>>>>>> 7b8587a8f9d1be2769569e60db38ddde7060f648
+	text-transform: lowercase; 
 }
 
 .side-card p,
@@ -283,7 +176,6 @@ section {
 .side-card ol,
 .side-card ul,
 .side-card table {
-<<<<<<< HEAD
 	text-align: center;
 	margin: 0 auto;
 }
@@ -299,18 +191,6 @@ section {
 	/* centraliza o bloco da lista se quiser */
 	max-width: 500px;
 	/* opcional: deixa a lista mais estreita */
-=======
-  text-align: center;
-  margin: 0 auto;
-}
-
-#more ol {
-  list-style-position: outside; /* garante que o número fique fora da caixa */
-  padding-left: 20px; /* espaço antes dos números */
-  text-align: left; /* alinha o texto à esquerda */
-  margin: 0 auto; /* centraliza o bloco da lista se quiser */
-  max-width: 500px; /* opcional: deixa a lista mais estreita */
->>>>>>> 7b8587a8f9d1be2769569e60db38ddde7060f648
 }
 
 /* todos os elementos que tenham a class form-control, dentro do elemento com
@@ -319,7 +199,6 @@ quando os elementos estiverm no estado de focus (input clicado)
 entao aplica os estilos abaixo */
 
 #contactModal .form-control:focus {
-<<<<<<< HEAD
 	box-shadow: 0 0 0.25rem rgb(243 166 212);
 	border-color: #f3a6d4;
 }
@@ -508,180 +387,3 @@ footer {
 .carousel-inner .carousel-indicators-custom {
 	display: none;
 }
-=======
-  box-shadow: 0 0 0.25rem rgb(243 166 212);
-  border-color: #f3a6d4;
-}
-
-#contactModal button.submit-button {
-  background-color: #f3a6d4;
-  color: white;
-  font-weight: bold;
-}
-
-#contactModal input[type="submit"] {
-  background-color: rgb(243, 152, 211);
-  border: none;
-  padding: 10px 20px;
-  font-weight: 600;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#contactModal input[type="submit"]:hover {
-  background-color: #d97ca7; /* rosa mais escuro no hover */
-}
-#contactModal input[type="text"],
-#contactModal input[type="email"],
-#contactModal textarea {
-  width: 100%; /* ocupa toda a largura disponível */
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin-bottom: 16px; /* espaço entre os campos */
-}
-
-footer {
-  text-align: left;
-  margin-top: 40px; /* espaçamento entre o contact e o footer */
-  padding: 20px;
-  color: rgb(92, 89, 85);
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.modern-table {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.label {
-  font-weight: 600;
-  color: #5c5955;
-}
-
-.value {
-  color: #5c5955;
-  text-align: right;
-}
-
-.text-pink {
-  color: rgb(243, 152, 211) !important;
-}
-
-.button-pink {
-  background-color: #f3a6d4 !important;
-  color: white !important;
-}
-
-.badge-blue {
-  background-color: #b3c9ed !important;
-  color: white;
-}
-.rhode-style-btn {
-  background-color: transparent;
-  color: #5c5955;
-  border: 1.5px solid #5c5955;
-  border-radius: 999px;
-  padding: 8px 20px;
-  font-family: "Sora", sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  font-size: 13px;
-  transition: all 0.2s ease-in-out;
-  display: inline-block;
-}
-
-.rhode-style-btn:hover {
-  background-color: #5c5955;
-  color: white;
-}
-
-.carousel-control-prev.custom-carousel-btn {
-  left: -50px;
-}
-
-.carousel-control-next.custom-carousel-btn {
-  right: -50px;
-}
-
-.custom-carousel-btn:hover {
-  background-color: #5c5955;
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.carousel-custom-btn {
-  width: 26px;
-  height: 26px;
-  border: 1px solid #5c5955;
-  border-radius: 50%;
-  background-color: transparent;
-  color: #5c5955;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease;
-  cursor: pointer;
-}
-
-.carousel-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
-  background-color: transparent;
-  position: relative;
-  top: 0;
-}
-.carousel-bottom-controls {
-  padding: 1.5rem 1rem; /* aumenta o espaço interno */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-}
-.carousel-footer-line {
-  height: 1px;
-  background-color: #bbb;
-  opacity: 0.7;
-  flex-grow: 1;
-  margin-right: 1rem;
-  margin-left: 1rem;
-}
-
-.carousel-indicators-custom {
-  gap: 5px;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  z-index: 1;
-}
-
-.carousel-dot {
-  width: 32px;
-  height: 4px;
-  background-color: #ccc;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.carousel-dot.active {
-  background-color: #5c5955;
-}
-
-.carousel-inner {
-  position: relative;
-}
-
->>>>>>> 7b8587a8f9d1be2769569e60db38ddde7060f648
