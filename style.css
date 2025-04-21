@@ -1,246 +1,290 @@
 /* -------------------------- */
-/* 1. Reset e fontes globais */
+/* 1. reset e fontes globais */
 /* -------------------------- */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Outfit", sans-serif;
-  }
-  
-  body {
-	background-color: #f5f4f1;
-	padding: 40px 60px;
-	padding-top: 15px;
-  }
-  
-  html {
-	scroll-behavior: smooth;
-  }
-  
-  /* -------------------------- */
-  /* 2. Cabeçalho (Header)     */
-  /* -------------------------- */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: #f5f4f1;
+  padding: 40px 60px;
+  padding-top: 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------- */
+/* 2. header     */
+/* -------------------------- */
+.ju-header {
+  background-color: #f5f4f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: #5c5955;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #e87ec6;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 700;
+  color: #5c5955;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+/* hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #5c5955;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* animação do menu aberto */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 1000px) {
   .ju-header {
-	background-color: #f5f4f1;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 40px;
-	border-bottom: 1px solid #ddd;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1000;
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px;
+    align-items: center;
   }
-  
+
   .nav-left,
   .nav-right {
-	display: flex;
-	gap: 24px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
   }
-  
-  .nav-left a,
-  .nav-right a {
-	text-decoration: none;
-	color: #5c5955;
-	font-weight: 600;
-	font-size: 14px;
-	transition: color 0.2s ease;
+
+  .ju-header.open .nav-left,
+  .ju-header.open .nav-right {
+    display: flex;
   }
-  
-  .nav-left a:hover,
-  .nav-right a:hover {
-	color: #e87ec6;
-  }
-  
+
   .logo {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	font-family: "Sora", sans-serif;
-	font-size: clamp(20px, 4vw, 32px);
-	font-weight: 700;
-	color: #5c5955;
-	text-transform: lowercase;
-	white-space: nowrap;
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    font-size: 24px;
   }
-  
-  @media (max-width: 600px) {
-	.ju-header {
-	  flex-direction: column;
-	  align-items: center;
-	  padding: 20px 20px;
-	  gap: 16px;
-	}
-  
-	.nav-left,
-	.nav-right {
-	  flex-direction: column;
-	  align-items: center;
-	  gap: 12px;
-	}
-  
-	.logo {
-	  position: static;
-	  transform: none;
-	  margin-top: 10px;
-	  font-size: 24px;
-	}
+
+  .ju-header.open .logo {
+    display: none;
   }
-  
-  /* -------------------------- */
-  /* 3. Seções gerais          */
-  /* -------------------------- */
-  section {
-	scroll-margin-top: 120px;
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
-  
-  .text-pink {
-	color: rgb(243, 152, 211) !important;
+
+  #funFacts\&Passion {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
-  
-  .badge-blue {
-	background-color: #b3c9ed !important;
-	color: white;
+
+  #funFacts\&Passion h2 {
+    margin-bottom: 1.5rem !important;
+    margin-bottom: clamp(1rem, 3vw, 3rem);
   }
-  .photo-group {
-	display: flex;
-	justify-content: center;
-	gap: 24px;
-	margin: 40px auto;
-	max-width: 1000px;
-	flex-wrap: wrap; /* importante pra empilhar no mobile */
+
+  #aboutMe {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
-  
-  .photo-group img {
-	width: 240px;
-	height: auto;
-	border-radius: 12px;
-	object-fit: cover;
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  #aboutMe h2 {
+    margin-bottom: 1.5rem !important;
+    margin-bottom: clamp(1rem, 3vw, 3rem);
   }
-  
-  @media (max-width: 600px) {
-	.photo-group {
-	  flex-direction: column;
-	  align-items: center;
-	  gap: 16px;
-	}
-  
-	.photo-group img {
-	  width: 90%;
-	  max-width: 300px;
-	}
-  }  
-  /* -------------------------- */
-  /* 4. Cards e botões custom   */
-  /* -------------------------- */
-  .rhode-style-btn,
-  .carousel-custom-btn {
-	background-color: transparent;
-	color: #5c5955;
-	border: 1.5px solid #5c5955;
-	border-radius: 999px;
-	padding: 8px 20px;
-	font-family: "Sora", sans-serif;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.6px;
-	font-size: 13px;
-	transition: all 0.2s ease-in-out;
-	display: inline-block;
-	cursor: pointer;
-	line-height: 1;
+}
+
+/* -------------------------- */
+/* 3. seções gerais          */
+/* -------------------------- */
+section {
+  scroll-margin-top: 120px;
+}
+
+.text-pink {
+  color: rgb(243, 152, 211) !important;
+}
+
+.badge-blue {
+  background-color: #b3c9ed !important;
+  color: white;
+}
+
+/* -------------------------- */
+/* 4. cards e botões custom   */
+/* -------------------------- */
+.rhode-style-btn,
+.carousel-custom-btn {
+  background-color: transparent;
+  color: #5c5955;
+  border: 1.5px solid #5c5955;
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 13px;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.rhode-style-btn:hover,
+.carousel-custom-btn:hover {
+  background-color: #5c5955;
+  color: white;
+}
+
+/* -------------------------- */
+/* 5. formulário e modal       */
+/* -------------------------- */
+#contactModal .form-control:focus {
+  box-shadow: 0 0 0.25rem rgb(243 166 212);
+  border-color: #f3a6d4;
+}
+
+#contactModal input[type="text"],
+#contactModal input[type="email"],
+#contactModal textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+/* -------------------------- */
+/* 6. carrossel               */
+/* -------------------------- */
+.carousel-controls-wrapper {
+  padding: 12px 20px;
+}
+
+.carousel-footer-line {
+  height: 1px;
+  background-color: #bbb;
+  opacity: 0.7;
+  flex-grow: 1;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.carousel-indicators-custom {
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.carousel-dot {
+  width: 32px;
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: #5c5955;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-inner .carousel-indicators-custom {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  #jujuCarousel {
+    max-width: 90%;
+    margin: 0 auto;
   }
-  
-  .rhode-style-btn:hover,
-  .carousel-custom-btn:hover {
-	background-color: #5c5955;
-	color: white;
-  }
-  
-  /* -------------------------- */
-  /* 5. Formulário e modal       */
-  /* -------------------------- */
-  #contactModal .form-control:focus {
-	box-shadow: 0 0 0.25rem rgb(243 166 212);
-	border-color: #f3a6d4;
-  }
-  
-  #contactModal input[type="text"],
-  #contactModal input[type="email"],
-  #contactModal textarea {
-	width: 100%;
-	padding: 10px;
-	font-size: 16px;
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	box-sizing: border-box;
-	margin-bottom: 16px;
-  }
-  
-  /* -------------------------- */
-  /* 6. Carrossel               */
-  /* -------------------------- */
-  .carousel-controls-wrapper {
-	padding: 12px 20px;
-  }
-  
-  .carousel-footer-line {
-	height: 1px;
-	background-color: #bbb;
-	opacity: 0.7;
-	flex-grow: 1;
-	margin-right: 1rem;
-	margin-left: 1rem;
-  }
-  
-  .carousel-indicators-custom {
-	gap: 5px;
-	display: flex;
-	justify-content: center;
-	z-index: 1;
-  }
-  
-  .carousel-dot {
-	width: 32px;
-	height: 4px;
-	background-color: #ccc;
-	border-radius: 4px;
-	transition: background-color 0.3s;
-  }
-  
-  .carousel-dot.active {
-	background-color: #5c5955;
-  }
-  
-  .carousel-inner {
-	position: relative;
-  }
-  
-  .carousel-inner .carousel-indicators-custom {
-	display: none;
-  }
-  
-  @media (max-width: 500px) {
-	#jujuCarousel {
-	  max-width: 90%;
-	  margin: 0 auto;
-	}
-  }
-  
-  /* -------------------------- */
-  /* 7. Footer                  */
-  /* -------------------------- */
+}
+
+/* -------------------------- */
+/* 7. footer                  */
+/* -------------------------- */
+footer {
+  text-align: left;
+  margin-top: 20px;
+  padding: 10px;
+  color: rgb(92, 89, 85);
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+@media (max-width: 1000px) {
   footer {
-	text-align: left;
-	margin-top: 40px;
-	padding: 20px;
-	color: rgb(92, 89, 85);
-	font-family: "Outfit", sans-serif;
-	font-weight: 600;
-	font-size: 14px;
+    margin-top: 40px;
   }
-  
+}
